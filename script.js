@@ -1,7 +1,7 @@
-let c = 0;
-let a=0;
-let ques = ["Q1. How can we write comment along with CSS code ?", "Q2. Which CSS property is used to control the text size of an element ?", "Q3.  The default value of position attribute is " , "Q4. Which of the following is the root tag of the HTML document?", "Q5. Which of the following HTML tag is used to display the text with scrolling effect?", "Q6. Which of the following tag is used to define options in a drop-down selection list?","Q7. CSS stands for" , "Q8. Which one is not a Semantic Tag " , "Q9. Which one of the following keywords is used for defining the function in the JavaScript?","Q10. What does XML stands for?" , "Q11. _______ variables are destroyed when you exit the function" , "Q12. ______ returns a number between 0 and 1" , "Q13. What is the full form of AJAX?","Q14. Which of the technology is not used by AJAX?","Q15. How can you test the Ajax code?" , "Q16. How many types of triggers are present in update panel?","Q17. Which of the following function is used to get the value of the previous element in an array?" , "Q18. Which of the following is a single global function defined in the jQuery library?" , "Q19. Which is the method that operates on the return value of $()?","Q20. php is a _______ language"]
-let ans = ["a /* a comment*/", "c font-size", "d relative" ,"b <html>" , "a <marquee>" , "c <option>" , "b cascading style sheet" , "d <title>" , "a function","b extensible markup language" , "c local", "b random()","a asynchronous javascript and XML","d flash","b JSU","a 2","c prev()","b jQuery()", "d css()","b server side scripting language"]
+let c = 0; //counter variable to store the question number
+let a=0; //counter variable for storing options
+let ques = ["Q1. How can we write comment along with CSS code ?", "Q2. Which CSS property is used to control the text size of an element ?", "Q3.  The default value of position attribute is " , "Q4. Which of the following is the root tag of the HTML document?", "Q5. Which of the following HTML tag is used to display the text with scrolling effect?", "Q6. Which of the following tag is used to define options in a drop-down selection list?","Q7. CSS stands for" , "Q8. Which one is not a Semantic Tag " , "Q9. Which one of the following keywords is used for defining the function in the JavaScript?","Q10. What does XML stands for?" , "Q11. _______ variables are destroyed when you exit the function" , "Q12. ______ returns a number between 0 and 1" , "Q13. What is the full form of AJAX?","Q14. Which of the technology is not used by AJAX?","Q15. How can you test the Ajax code?" , "Q16. How many types of triggers are present in update panel?","Q17. Which of the following function is used to get the value of the previous element in an array?" , "Q18. Which of the following is a single global function defined in the jQuery library?" , "Q19. Which is the method that operates on the return value of $()?","Q20. php is a _______ language"] //Array to store questions
+let ans = ["a /* a comment*/", "c font-size", "d relative" ,"b <html>" , "a <marquee>" , "c <option>" , "b cascading style sheet" , "d <title>" , "a function","b extensible markup language" , "c local", "b random()","a asynchronous javascript and XML","d flash","b JSU","a 2","c prev()","b jQuery()", "d css()","b server side scripting language"] //Array to store correct answers
 let options = ["a /* a comment*/" , "b //a comment //" , "c / a comment/" , "d <’a comment’>",
                 "a font-style", "b text-size" , "c font-size" , "d text-style",
                 "a fixed" , "b absolute","c inherit","d relative",
@@ -22,12 +22,13 @@ let options = ["a /* a comment*/" , "b //a comment //" , "c / a comment/" , "d <
                 "a $()","b jQuery()","c Queryanalysis()","d Onclick()",
                 "a show()","b click()","c done()","d css()",
                 "a scripting language","b server side scripting language","c machine language","d binary language",
-            ]
+            ] //array to store options
 let nameplayer
 let points = 0
 
 
-function questions() {
+function questions() //function to add a new question and delete the previous one
+  {
 
     let start = document.querySelector(".start")
 
@@ -91,7 +92,8 @@ function questions() {
         scorecard()
     }
 }
-function scorecard() {
+function scorecard() //function to add a scorecard after the last question has been answered
+  {
     let card = document.createElement("div")
     card.setAttribute("class","scorecard")
     let text1 = document.createElement("div")
@@ -139,67 +141,59 @@ function scorecard() {
 
 
 
-function processInput1() {
+function processInput1() //function to calculate score of user andd display it
+{
     let inputValue = document.getElementById("userInput1").value.trim();
-    console.log(inputValue);
+   
 
    let answer = ans[c-1].trim()
-   console.log(answer);
+
    
     if (inputValue === answer) {
         points++
     }
  
-    console.log(points);
+
 
     let outputDiv = document.getElementById("output")
     outputDiv.innerText = "Score: "+points
 
 }
-function processInput2() {
+function processInput2() //function to calculate score of user andd display it
+{
     var inputValue = document.getElementById("userInput2").value.trim();
-    console.log(inputValue);
 
     let answer = ans[c-1].trim()
-    console.log(answer);
 
     if (inputValue === answer) {
         points++
     }
-    
-    console.log(points);
+  
     let outputDiv = document.getElementById("output")
     outputDiv.innerText = "Score: "+points
     
 }
-function processInput3() {
+function processInput3() //function to calculate score of user andd display it
+  {
     var inputValue = document.getElementById("userInput3").value.trim();
-    console.log(inputValue);
-
     let answer = ans[c-1].trim()
-    console.log(answer);
-
     if (inputValue === answer) {
         points++
     }
-    
-    console.log(points);
+
     let outputDiv = document.getElementById("output")
     outputDiv.innerText = "Score: "+points
 
 }
-function processInput4() {
+function processInput4() //function to calculate score of user andd display it
+  {
     var inputValue = document.getElementById("userInput4").value.trim();
-    console.log(inputValue);
 
     let answer = ans[c-1].trim()
-    console.log(answer);
-
     if (inputValue === answer) {
         points++
     }
     
-    console.log(points);
     let outputDiv = document.getElementById("output")
     outputDiv.innerText = "Score: "+points
     
