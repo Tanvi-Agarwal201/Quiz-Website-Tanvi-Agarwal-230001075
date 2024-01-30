@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="src/output.css">
+</head>
+
+<body>
+    <script src="script.js"></script>
+
+    <nav class="bg-purple-400 flex justify-between gap-4 items-center">
+        <img src="pclub iiti logo.jpg" alt="">
+        <ul class="flex gap-8 justify-center">
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="main bg-blue-200 flex flex-col gap-3">
+            <div class="text1">Geek - o - Tech</div>
+            <div class="line"></div>
+            <div class="text2">Play this quiz now to test your knowledge in web development!!!!!</div>
+        </div>
+        <div class="start text-red-600">Get Started</div>
+        <div class="entry">
+            <div class="input">
+
+                <label for="name">Enter your name</label>
+                <input id="inp"  type="text">
+            </div>
+            <button onclick="questions()">Next ></button>
+        </div>
+        <div class="questionbox">
+            <div id="output"></div>
+        </div>
+        <div class="score"></div>
+        <!-- <img src="how can i help u.png" alt="" class="help"> -->
+        
+    </div>
+    <!-- <footer class="grid">
+        
+    </footer> -->
+</body>
+
+</html>
