@@ -46,17 +46,7 @@ function questions() {
     let cont = document.querySelector(".questionbox")
 
     question.innerText = ques[c]
-    question.style.width = "50vw"
-    question.style.height = "45vh"
-    question.style.border = "2px solid black"
-    question.style.borderRadius = "20px"
-    question.style.padding = "10px"
-    question.style.margin = "auto"
-    question.style.marginTop = "30px"
     cont.appendChild(question)
-    question.style.backgroundImage = "url('output-onlinepngtools.png')"
-    question.style.backgroundPosition = "center"
-    question.style.backgroundSize = "800px"
     let optionbox = document.createElement("div")
     question.appendChild(optionbox)
     let option1 = document.createElement("input")
@@ -103,13 +93,7 @@ function questions() {
 }
 function scorecard() {
     let card = document.createElement("div")
-    card.style.width = "50vw"
-    card.style.height = "60vh"
-    card.style.border = "2px solid black"
-    card.style.borderRadius = "20px"
-    card.style.padding = "10px"
-    card.style.margin = "auto"
-    card.style.marginTop = "50px"
+    card.setAttribute("class","scorecard")
     let text1 = document.createElement("div")
     text1.setAttribute("class", "txt1")
     let text2 = document.createElement("div")
@@ -124,13 +108,11 @@ function scorecard() {
     card.appendChild(text2)
     card.appendChild(text3)
     card.appendChild(text4)
-    // card.appendChild(text3)
     text1.style.textAlign = "center"
     text2.style.textAlign = "center"
     text3.style.textAlign = "center"
     text4.style.textAlign = "center"
     card.style.backgroundColor = "#e8cee8"
-    // text2.innerText = nameplayer + " 's score is " + points
     if(points > 15 )
     {
         text2.innerText = nameplayer+"'s score is "+points
