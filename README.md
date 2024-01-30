@@ -1,1 +1,1 @@
- Quiz Website 
+I have created a webpage for a quiz. Enter your name to get started with the quiz. Points will be displayed after attempting each question. At the end of the the quiz, a scorecard will be displayed with total points scored and a remark
