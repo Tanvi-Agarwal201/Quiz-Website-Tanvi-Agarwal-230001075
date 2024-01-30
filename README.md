@@ -1,4 +1,4 @@
-Geek - o - Tech
+# Geek - o - Tech
 I have created a webpage for a quiz.
 To get started, enter your name in the space provided and click on the next button.
 On clicking the next button, questions will be displayed with 4 options per question.
